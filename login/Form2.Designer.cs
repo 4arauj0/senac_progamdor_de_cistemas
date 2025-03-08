@@ -42,12 +42,12 @@
             lbl_resultado = new Label();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            btncadastra = new Button();
             label1 = new Label();
             txb_Ncadastro = new TextBox();
             txb_confirmac1 = new TextBox();
             label4 = new Label();
             txb_senhac = new TextBox();
-            btn_cadastra = new Button();
             label2 = new Label();
             txb_Ecadastro = new TextBox();
             label3 = new Label();
@@ -186,7 +186,6 @@
             lbl_resultado.TabIndex = 6;
             lbl_resultado.Text = "                                                   ";
             lbl_resultado.UseWaitCursor = true;
-            lbl_resultado.Click += lbl_resultado_Click;
             // 
             // pictureBox1
             // 
@@ -204,21 +203,35 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.White;
+            groupBox1.Controls.Add(btncadastra);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txb_Ncadastro);
             groupBox1.Controls.Add(txb_confirmac1);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txb_senhac);
-            groupBox1.Controls.Add(btn_cadastra);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txb_Ecadastro);
             groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(505, 63);
+            groupBox1.Location = new Point(504, 54);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(188, 248);
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
             groupBox1.UseWaitCursor = true;
+            // 
+            // btncadastra
+            // 
+            btncadastra.BackColor = SystemColors.ActiveCaptionText;
+            btncadastra.Font = new Font("Showcard Gothic", 11.25F);
+            btncadastra.ForeColor = Color.FromArgb(192, 0, 192);
+            btncadastra.Location = new Point(56, 210);
+            btncadastra.Name = "btncadastra";
+            btncadastra.Size = new Size(90, 30);
+            btncadastra.TabIndex = 16;
+            btncadastra.Text = "cadastra";
+            btncadastra.UseVisualStyleBackColor = false;
+            btncadastra.UseWaitCursor = true;
+            btncadastra.Click += button1_Click_1;
             // 
             // label1
             // 
@@ -267,7 +280,6 @@
             label4.TabIndex = 15;
             label4.Text = "insira seu nome";
             label4.UseWaitCursor = true;
-            label4.Click += label4_Click;
             // 
             // txb_senhac
             // 
@@ -280,20 +292,6 @@
             txb_senhac.Size = new Size(170, 26);
             txb_senhac.TabIndex = 9;
             txb_senhac.UseWaitCursor = true;
-            // 
-            // btn_cadastra
-            // 
-            btn_cadastra.BackColor = SystemColors.ActiveCaptionText;
-            btn_cadastra.Font = new Font("Showcard Gothic", 11.25F);
-            btn_cadastra.ForeColor = Color.FromArgb(192, 0, 192);
-            btn_cadastra.Location = new Point(51, 210);
-            btn_cadastra.Name = "btn_cadastra";
-            btn_cadastra.Size = new Size(90, 30);
-            btn_cadastra.TabIndex = 11;
-            btn_cadastra.Text = "cadastra";
-            btn_cadastra.UseVisualStyleBackColor = false;
-            btn_cadastra.UseWaitCursor = true;
-            btn_cadastra.Click += button1_Click;
             // 
             // label2
             // 
@@ -338,7 +336,7 @@
             label6.FlatStyle = FlatStyle.System;
             label6.Font = new Font("Showcard Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(556, 38);
+            label6.Location = new Point(560, 36);
             label6.Name = "label6";
             label6.Size = new Size(95, 22);
             label6.TabIndex = 15;
@@ -397,11 +395,11 @@
         private TextBox txb_confirmac1;
         private Label label4;
         private TextBox txb_senhac;
-        private Button btn_cadastra;
         private Label label2;
         private TextBox txb_Ecadastro;
         private Label label3;
         public GroupBox groupBox1;
         private Label label6;
+        private Button btncadastra;
     }
 }
