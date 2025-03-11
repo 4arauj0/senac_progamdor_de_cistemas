@@ -170,7 +170,6 @@
             label5.TabIndex = 11;
             label5.Text = "login";
             label5.UseWaitCursor = true;
-            label5.Click += label5_Click;
             // 
             // lbl_resultado
             // 
@@ -198,7 +197,6 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             pictureBox1.UseWaitCursor = true;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // groupBox1
             // 
@@ -231,7 +229,7 @@
             btncadastra.Text = "cadastra";
             btncadastra.UseVisualStyleBackColor = false;
             btncadastra.UseWaitCursor = true;
-            btncadastra.Click += button1_Click_1;
+            btncadastra.Click += btncadastra_Click;
             // 
             // label1
             // 
