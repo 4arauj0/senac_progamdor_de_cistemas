@@ -12,5 +12,6 @@ namespace Cadastro_cliente
         public string latino { get; set; }
         public int branco { get; set; }
         public string asiatico { get; set; }
+        
     }
 }

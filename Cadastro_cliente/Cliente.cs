@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Cadastro_cliente
 {
-    internal class class_cliente
+    internal class Cliente
     {
         public int id {  get; set; }
         public string Nome { get; set; }
@@ -21,8 +21,8 @@ namespace Cadastro_cliente
         public TipoCliente NomeSocial { get; set; }
         public TipoCliente etnia { get; set; }
         public TipoCliente tinacionalidadepo { get; set; }
-       
-      
+        public TipoCliente dataNacimento { get; set; }
+
 
     }
 }

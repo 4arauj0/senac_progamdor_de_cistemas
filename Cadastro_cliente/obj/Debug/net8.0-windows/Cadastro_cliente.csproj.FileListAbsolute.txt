@@ -1,0 +1,17 @@
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.csproj.GenerateResource.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.AssemblyInfoInputs.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.AssemblyInfo.cs
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.csproj.CoreCompileInputs.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.sourcelink.json
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\bin\Debug\net8.0-windows\Cadastro_cliente.exe
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\bin\Debug\net8.0-windows\Cadastro_cliente.deps.json
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\bin\Debug\net8.0-windows\Cadastro_cliente.runtimeconfig.json
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\bin\Debug\net8.0-windows\Cadastro_cliente.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\bin\Debug\net8.0-windows\Cadastro_cliente.pdb
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.Form1.resources
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\refint\Cadastro_cliente.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.pdb
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.genruntimeconfig.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\ref\Cadastro_cliente.dll
