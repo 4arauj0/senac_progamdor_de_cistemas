@@ -30,42 +30,45 @@
         {
             btn_cadastrar = new Button();
             groupBox1 = new GroupBox();
+            label3 = new Label();
+            rdb_juridica = new RadioButton();
+            rdb_fisica = new RadioButton();
+            ckb_sim = new CheckBox();
+            cmb_etnia = new ComboBox();
+            txb_email = new TextBox();
+            cmb_genero = new ComboBox();
+            label4 = new Label();
+            txb_nomesocial = new TextBox();
+            msk_nascimento = new MaskedTextBox();
+            msk_numero = new MaskedTextBox();
+            txb_nome = new TextBox();
+            lbl_nome = new Label();
+            lbl_email = new Label();
+            lbl_numero = new Label();
+            lbl_nomesocial = new Label();
+            lbl_etnia = new Label();
+            lbl_estrangeiro = new Label();
+            lbl_nascimento = new Label();
+            lbl_genero = new Label();
             groupBox2 = new GroupBox();
+            label6 = new Label();
+            cmb_estado = new ComboBox();
+            label5 = new Label();
+            txb_cep = new TextBox();
+            txb_municipio = new TextBox();
+            txb_bairro = new TextBox();
+            txb_complemento = new TextBox();
+            txb_numero = new TextBox();
+            txb_lagradouro = new TextBox();
+            label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
             label1 = new Label();
             label2 = new Label();
-            lbl_genero = new Label();
-            lbl_nascimento = new Label();
-            lbl_estrangeiro = new Label();
-            lbl_etnia = new Label();
-            lbl_nomesocial = new Label();
-            lbl_numero = new Label();
-            lbl_email = new Label();
-            lbl_nome = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            textBox1 = new TextBox();
-            msk_numero = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            comboBox1 = new ComboBox();
-            textBox2 = new TextBox();
-            comboBox2 = new ComboBox();
-            checkBox1 = new CheckBox();
-            checkBox3 = new CheckBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            label3 = new Label();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
+            cadastrou = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -87,18 +90,17 @@
             // 
             groupBox1.BackColor = Color.WhiteSmoke;
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Controls.Add(checkBox3);
-            groupBox1.Controls.Add(checkBox1);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(rdb_juridica);
+            groupBox1.Controls.Add(rdb_fisica);
+            groupBox1.Controls.Add(ckb_sim);
+            groupBox1.Controls.Add(cmb_etnia);
+            groupBox1.Controls.Add(txb_email);
+            groupBox1.Controls.Add(cmb_genero);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(maskedTextBox2);
+            groupBox1.Controls.Add(txb_nomesocial);
+            groupBox1.Controls.Add(msk_nascimento);
             groupBox1.Controls.Add(msk_numero);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txb_nome);
             groupBox1.Controls.Add(lbl_nome);
             groupBox1.Controls.Add(lbl_email);
             groupBox1.Controls.Add(lbl_numero);
@@ -113,37 +115,350 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(139, 196);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 15);
+            label3.TabIndex = 25;
+            label3.Text = "pessoa";
+            // 
+            // rdb_juridica
+            // 
+            rdb_juridica.AutoSize = true;
+            rdb_juridica.Location = new Point(264, 195);
+            rdb_juridica.Name = "rdb_juridica";
+            rdb_juridica.Size = new Size(64, 19);
+            rdb_juridica.TabIndex = 10;
+            rdb_juridica.TabStop = true;
+            rdb_juridica.Text = "juridica";
+            rdb_juridica.UseVisualStyleBackColor = true;
+            // 
+            // rdb_fisica
+            // 
+            rdb_fisica.AutoSize = true;
+            rdb_fisica.Location = new Point(193, 194);
+            rdb_fisica.Name = "rdb_fisica";
+            rdb_fisica.Size = new Size(52, 19);
+            rdb_fisica.TabIndex = 9;
+            rdb_fisica.TabStop = true;
+            rdb_fisica.Text = "fisica";
+            rdb_fisica.UseVisualStyleBackColor = true;
+            // 
+            // ckb_sim
+            // 
+            ckb_sim.AutoSize = true;
+            ckb_sim.Location = new Point(69, 195);
+            ckb_sim.Name = "ckb_sim";
+            ckb_sim.Size = new Size(46, 19);
+            ckb_sim.TabIndex = 8;
+            ckb_sim.Text = "Sim";
+            ckb_sim.UseVisualStyleBackColor = true;
+            // 
+            // cmb_etnia
+            // 
+            cmb_etnia.FormattingEnabled = true;
+            cmb_etnia.Items.AddRange(new object[] { "masculino", "femenino", "não binario\t\t\t" });
+            cmb_etnia.Location = new Point(69, 160);
+            cmb_etnia.Name = "cmb_etnia";
+            cmb_etnia.Size = new Size(55, 23);
+            cmb_etnia.TabIndex = 7;
+            // 
+            // txb_email
+            // 
+            txb_email.Location = new Point(223, 117);
+            txb_email.Name = "txb_email";
+            txb_email.Size = new Size(114, 23);
+            txb_email.TabIndex = 6;
+            // 
+            // cmb_genero
+            // 
+            cmb_genero.FormattingEnabled = true;
+            cmb_genero.Items.AddRange(new object[] { "masculino", "femenino", "não binario\t\t\t" });
+            cmb_genero.Location = new Point(69, 117);
+            cmb_genero.Name = "cmb_genero";
+            cmb_genero.Size = new Size(55, 23);
+            cmb_genero.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BorderStyle = BorderStyle.Fixed3D;
+            label4.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ImageKey = "(nenhum)";
+            label4.Location = new Point(139, 11);
+            label4.Name = "label4";
+            label4.RightToLeft = RightToLeft.No;
+            label4.Size = new Size(62, 18);
+            label4.TabIndex = 16;
+            label4.Text = "cliente";
+            // 
+            // txb_nomesocial
+            // 
+            txb_nomesocial.Location = new Point(251, 44);
+            txb_nomesocial.Name = "txb_nomesocial";
+            txb_nomesocial.Size = new Size(86, 23);
+            txb_nomesocial.TabIndex = 2;
+            // 
+            // msk_nascimento
+            // 
+            msk_nascimento.Location = new Point(70, 83);
+            msk_nascimento.Mask = "00/00/0000";
+            msk_nascimento.Name = "msk_nascimento";
+            msk_nascimento.Size = new Size(94, 23);
+            msk_nascimento.TabIndex = 3;
+            msk_nascimento.ValidatingType = typeof(DateTime);
+            // 
+            // msk_numero
+            // 
+            msk_numero.Location = new Point(223, 83);
+            msk_numero.Mask = "(00)00000-000";
+            msk_numero.Name = "msk_numero";
+            msk_numero.Size = new Size(114, 23);
+            msk_numero.TabIndex = 4;
+            // 
+            // txb_nome
+            // 
+            txb_nome.Location = new Point(70, 44);
+            txb_nome.Name = "txb_nome";
+            txb_nome.Size = new Size(94, 23);
+            txb_nome.TabIndex = 1;
+            // 
+            // lbl_nome
+            // 
+            lbl_nome.AutoSize = true;
+            lbl_nome.Location = new Point(28, 47);
+            lbl_nome.Name = "lbl_nome";
+            lbl_nome.Size = new Size(40, 15);
+            lbl_nome.TabIndex = 12;
+            lbl_nome.Text = "Nome";
+            // 
+            // lbl_email
+            // 
+            lbl_email.AutoSize = true;
+            lbl_email.Location = new Point(172, 120);
+            lbl_email.Name = "lbl_email";
+            lbl_email.Size = new Size(41, 15);
+            lbl_email.TabIndex = 11;
+            lbl_email.Text = "E-mail";
+            // 
+            // lbl_numero
+            // 
+            lbl_numero.AutoSize = true;
+            lbl_numero.Location = new Point(172, 86);
+            lbl_numero.Name = "lbl_numero";
+            lbl_numero.Size = new Size(51, 15);
+            lbl_numero.TabIndex = 10;
+            lbl_numero.Text = "Numero";
+            // 
+            // lbl_nomesocial
+            // 
+            lbl_nomesocial.AutoSize = true;
+            lbl_nomesocial.Location = new Point(172, 47);
+            lbl_nomesocial.Name = "lbl_nomesocial";
+            lbl_nomesocial.Size = new Size(73, 15);
+            lbl_nomesocial.TabIndex = 9;
+            lbl_nomesocial.Text = "Nome social";
+            // 
+            // lbl_etnia
+            // 
+            lbl_etnia.AutoSize = true;
+            lbl_etnia.Location = new Point(33, 163);
+            lbl_etnia.Name = "lbl_etnia";
+            lbl_etnia.Size = new Size(33, 15);
+            lbl_etnia.TabIndex = 8;
+            lbl_etnia.Text = "Etnia";
+            // 
+            // lbl_estrangeiro
+            // 
+            lbl_estrangeiro.AutoSize = true;
+            lbl_estrangeiro.Location = new Point(0, 196);
+            lbl_estrangeiro.Name = "lbl_estrangeiro";
+            lbl_estrangeiro.Size = new Size(66, 15);
+            lbl_estrangeiro.TabIndex = 7;
+            lbl_estrangeiro.Text = "Estrangeiro";
+            // 
+            // lbl_nascimento
+            // 
+            lbl_nascimento.AutoSize = true;
+            lbl_nascimento.Location = new Point(2, 86);
+            lbl_nascimento.Name = "lbl_nascimento";
+            lbl_nascimento.Size = new Size(66, 15);
+            lbl_nascimento.TabIndex = 6;
+            lbl_nascimento.Text = "Nacimento";
+            // 
+            // lbl_genero
+            // 
+            lbl_genero.AutoSize = true;
+            lbl_genero.Location = new Point(22, 120);
+            lbl_genero.Name = "lbl_genero";
+            lbl_genero.Size = new Size(45, 15);
+            lbl_genero.TabIndex = 5;
+            lbl_genero.Text = "Genero";
+            // 
             // groupBox2
             // 
             groupBox2.BackColor = Color.WhiteSmoke;
-            groupBox2.Controls.Add(textBox9);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(textBox7);
-            groupBox2.Controls.Add(textBox6);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(textBox4);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(cmb_estado);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(txb_cep);
+            groupBox2.Controls.Add(txb_municipio);
+            groupBox2.Controls.Add(txb_bairro);
+            groupBox2.Controls.Add(txb_complemento);
+            groupBox2.Controls.Add(txb_numero);
+            groupBox2.Controls.Add(txb_lagradouro);
             groupBox2.Controls.Add(label16);
             groupBox2.Controls.Add(label15);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(label13);
             groupBox2.Controls.Add(label12);
             groupBox2.Controls.Add(label11);
-            groupBox2.Controls.Add(label1);
             groupBox2.Location = new Point(473, 22);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(300, 290);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(80, 255);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 15);
+            label6.TabIndex = 28;
+            label6.Text = "estado";
+            // 
+            // cmb_estado
+            // 
+            cmb_estado.FormattingEnabled = true;
+            cmb_estado.Location = new Point(140, 252);
+            cmb_estado.Name = "cmb_estado";
+            cmb_estado.Size = new Size(100, 23);
+            cmb_estado.TabIndex = 27;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BorderStyle = BorderStyle.Fixed3D;
+            label5.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ImageKey = "(nenhum)";
+            label5.Location = new Point(105, 11);
+            label5.Name = "label5";
+            label5.RightToLeft = RightToLeft.No;
+            label5.Size = new Size(75, 18);
+            label5.TabIndex = 26;
+            label5.Text = "endereço";
+            // 
+            // txb_cep
+            // 
+            txb_cep.Location = new Point(140, 213);
+            txb_cep.Name = "txb_cep";
+            txb_cep.Size = new Size(100, 23);
+            txb_cep.TabIndex = 22;
+            // 
+            // txb_municipio
+            // 
+            txb_municipio.Location = new Point(140, 171);
+            txb_municipio.Name = "txb_municipio";
+            txb_municipio.Size = new Size(100, 23);
+            txb_municipio.TabIndex = 21;
+            // 
+            // txb_bairro
+            // 
+            txb_bairro.Location = new Point(140, 133);
+            txb_bairro.Name = "txb_bairro";
+            txb_bairro.Size = new Size(100, 23);
+            txb_bairro.TabIndex = 20;
+            // 
+            // txb_complemento
+            // 
+            txb_complemento.Location = new Point(140, 101);
+            txb_complemento.Name = "txb_complemento";
+            txb_complemento.Size = new Size(100, 23);
+            txb_complemento.TabIndex = 19;
+            // 
+            // txb_numero
+            // 
+            txb_numero.Location = new Point(140, 67);
+            txb_numero.Name = "txb_numero";
+            txb_numero.Size = new Size(100, 23);
+            txb_numero.TabIndex = 18;
+            // 
+            // txb_lagradouro
+            // 
+            txb_lagradouro.Location = new Point(140, 33);
+            txb_lagradouro.Name = "txb_lagradouro";
+            txb_lagradouro.Size = new Size(100, 23);
+            txb_lagradouro.TabIndex = 17;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(57, 171);
+            label16.Name = "label16";
+            label16.Size = new Size(61, 15);
+            label16.TabIndex = 16;
+            label16.Text = "Municipio";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(90, 213);
+            label15.Name = "label15";
+            label15.Size = new Size(28, 15);
+            label15.TabIndex = 15;
+            label15.Text = "Cep";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(49, 33);
+            label14.Name = "label14";
+            label14.Size = new Size(69, 15);
+            label14.TabIndex = 14;
+            label14.Text = "Logradouro";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(67, 68);
+            label13.Name = "label13";
+            label13.Size = new Size(51, 15);
+            label13.TabIndex = 13;
+            label13.Text = "Numero";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(34, 101);
+            label12.Name = "label12";
+            label12.Size = new Size(84, 15);
+            label12.TabIndex = 12;
+            label12.Text = "Complemento";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(80, 133);
+            label11.Name = "label11";
+            label11.Size = new Size(38, 15);
+            label11.TabIndex = 11;
+            label11.Text = "Bairro";
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(140, 0);
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ImageKey = "(nenhum)";
+            label1.Location = new Point(563, 9);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
-            label1.Click += label1_Click;
+            label1.RightToLeft = RightToLeft.No;
+            label1.Size = new Size(106, 24);
+            label1.TabIndex = 5;
+            label1.Text = "CADASTRO";
             // 
             // label2
             // 
@@ -158,293 +473,15 @@
             label2.TabIndex = 4;
             label2.Text = "CADASTRO";
             // 
-            // lbl_genero
-            // 
-            lbl_genero.AutoSize = true;
-            lbl_genero.Location = new Point(22, 120);
-            lbl_genero.Name = "lbl_genero";
-            lbl_genero.Size = new Size(45, 15);
-            lbl_genero.TabIndex = 5;
-            lbl_genero.Text = "Genero";
-            // 
-            // lbl_nascimento
-            // 
-            lbl_nascimento.AutoSize = true;
-            lbl_nascimento.Location = new Point(2, 86);
-            lbl_nascimento.Name = "lbl_nascimento";
-            lbl_nascimento.Size = new Size(66, 15);
-            lbl_nascimento.TabIndex = 6;
-            lbl_nascimento.Text = "Nacimento";
-            // 
-            // lbl_estrangeiro
-            // 
-            lbl_estrangeiro.AutoSize = true;
-            lbl_estrangeiro.Location = new Point(0, 196);
-            lbl_estrangeiro.Name = "lbl_estrangeiro";
-            lbl_estrangeiro.Size = new Size(66, 15);
-            lbl_estrangeiro.TabIndex = 7;
-            lbl_estrangeiro.Text = "Estrangeiro";
-            // 
-            // lbl_etnia
-            // 
-            lbl_etnia.AutoSize = true;
-            lbl_etnia.Location = new Point(33, 163);
-            lbl_etnia.Name = "lbl_etnia";
-            lbl_etnia.Size = new Size(33, 15);
-            lbl_etnia.TabIndex = 8;
-            lbl_etnia.Text = "Etnia";
-            // 
-            // lbl_nomesocial
-            // 
-            lbl_nomesocial.AutoSize = true;
-            lbl_nomesocial.Location = new Point(172, 47);
-            lbl_nomesocial.Name = "lbl_nomesocial";
-            lbl_nomesocial.Size = new Size(73, 15);
-            lbl_nomesocial.TabIndex = 9;
-            lbl_nomesocial.Text = "Nome social";
-            // 
-            // lbl_numero
-            // 
-            lbl_numero.AutoSize = true;
-            lbl_numero.Location = new Point(172, 86);
-            lbl_numero.Name = "lbl_numero";
-            lbl_numero.Size = new Size(51, 15);
-            lbl_numero.TabIndex = 10;
-            lbl_numero.Text = "Numero";
-            // 
-            // lbl_email
-            // 
-            lbl_email.AutoSize = true;
-            lbl_email.Location = new Point(172, 120);
-            lbl_email.Name = "lbl_email";
-            lbl_email.Size = new Size(41, 15);
-            lbl_email.TabIndex = 11;
-            lbl_email.Text = "E-mail";
-            // 
-            // lbl_nome
-            // 
-            lbl_nome.AutoSize = true;
-            lbl_nome.Location = new Point(28, 47);
-            lbl_nome.Name = "lbl_nome";
-            lbl_nome.Size = new Size(40, 15);
-            lbl_nome.TabIndex = 12;
-            lbl_nome.Text = "Nome";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(19, 133);
-            label11.Name = "label11";
-            label11.Size = new Size(44, 15);
-            label11.TabIndex = 11;
-            label11.Text = "label11";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(19, 101);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 15);
-            label12.TabIndex = 12;
-            label12.Text = "label12";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(19, 68);
-            label13.Name = "label13";
-            label13.Size = new Size(44, 15);
-            label13.TabIndex = 13;
-            label13.Text = "label13";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(19, 33);
-            label14.Name = "label14";
-            label14.Size = new Size(44, 15);
-            label14.TabIndex = 14;
-            label14.Text = "label14";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(19, 213);
-            label15.Name = "label15";
-            label15.Size = new Size(44, 15);
-            label15.TabIndex = 15;
-            label15.Text = "label15";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Location = new Point(19, 171);
-            label16.Name = "label16";
-            label16.Size = new Size(44, 15);
-            label16.TabIndex = 16;
-            label16.Text = "label16";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(70, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(94, 23);
-            textBox1.TabIndex = 3;
-            // 
-            // msk_numero
-            // 
-            msk_numero.Location = new Point(223, 83);
-            msk_numero.Mask = "(00)00000-000";
-            msk_numero.Name = "msk_numero";
-            msk_numero.Size = new Size(114, 23);
-            msk_numero.TabIndex = 13;
-            // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Location = new Point(70, 83);
-            maskedTextBox2.Mask = "00/00/0000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(94, 23);
-            maskedTextBox2.TabIndex = 14;
-            maskedTextBox2.ValidatingType = typeof(DateTime);
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(251, 44);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(86, 23);
-            textBox3.TabIndex = 15;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BorderStyle = BorderStyle.Fixed3D;
-            label4.Font = new Font("Stencil", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ImageKey = "(nenhum)";
-            label4.Location = new Point(142, 9);
-            label4.Name = "label4";
-            label4.RightToLeft = RightToLeft.No;
-            label4.Size = new Size(62, 18);
-            label4.TabIndex = 16;
-            label4.Text = "cliente";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "masculino", "femenino", "não binario\t\t\t" });
-            comboBox1.Location = new Point(69, 117);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(55, 23);
-            comboBox1.TabIndex = 17;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(223, 117);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(114, 23);
-            textBox2.TabIndex = 18;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "masculino", "femenino", "não binario\t\t\t" });
-            comboBox2.Location = new Point(69, 160);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(55, 23);
-            comboBox2.TabIndex = 19;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(69, 195);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(46, 19);
-            checkBox1.TabIndex = 20;
-            checkBox1.Text = "Sim";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(121, 195);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(48, 19);
-            checkBox3.TabIndex = 22;
-            checkBox3.Text = "Não";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(206, 194);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(52, 19);
-            radioButton1.TabIndex = 23;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "fisica";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(264, 196);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(64, 19);
-            radioButton2.TabIndex = 24;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "juridica";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(237, 168);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 15);
-            label3.TabIndex = 25;
-            label3.Text = "pessoa";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(69, 30);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 17;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(69, 64);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 18;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(69, 98);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 19;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(69, 130);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 20;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(69, 168);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 23);
-            textBox8.TabIndex = 21;
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(69, 210);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 22;
+            // cadastrou
+            // 
+            cadastrou.AutoSize = true;
+            cadastrou.BackColor = Color.White;
+            cadastrou.Location = new Point(379, 297);
+            cadastrou.Name = "cadastrou";
+            cadastrou.Size = new Size(70, 15);
+            cadastrou.TabIndex = 6;
+            cadastrou.Text = "                     ";
             // 
             // Form1
             // 
@@ -452,13 +489,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(794, 450);
-            Controls.Add(groupBox2);
+            Controls.Add(cadastrou);
+            Controls.Add(label1);
             Controls.Add(btn_cadastrar);
             Controls.Add(label2);
             Controls.Add(groupBox1);
+            Controls.Add(groupBox2);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -481,31 +519,34 @@
         private Label lbl_nascimento;
         private Label lbl_genero;
         private Label label2;
-        private Label label1;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox msk_nascimento;
         private MaskedTextBox msk_numero;
-        private TextBox textBox1;
+        private TextBox txb_nome;
         private Label label16;
         private Label label15;
         private Label label14;
         private Label label13;
         private Label label12;
         private Label label11;
-        private TextBox textBox3;
-        private ComboBox comboBox1;
+        private TextBox txb_nomesocial;
+        private ComboBox cmb_genero;
         private Label label4;
-        private TextBox textBox2;
-        private ComboBox comboBox2;
-        private CheckBox checkBox1;
+        private TextBox txb_email;
+        private ComboBox cmb_etnia;
+        private CheckBox ckb_sim;
         private Label label3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private CheckBox checkBox3;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
+        private RadioButton rdb_juridica;
+        private RadioButton rdb_fisica;
+        private TextBox txb_cep;
+        private TextBox txb_municipio;
+        private TextBox txb_bairro;
+        private TextBox txb_complemento;
+        private TextBox txb_numero;
+        private TextBox txb_lagradouro;
+        private Label label1;
+        private Label label5;
+        private Label label6;
+        private ComboBox cmb_estado;
+        private Label cadastrou;
     }
 }

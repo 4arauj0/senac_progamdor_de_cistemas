@@ -15,3 +15,4 @@ C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\C
 C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.pdb
 C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.genruntimeconfig.cache
 C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\ref\Cadastro_cliente.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\Cadastro_cliente\obj\Debug\net8.0-windows\Cadastro_cliente.Properties.Resources.resources
