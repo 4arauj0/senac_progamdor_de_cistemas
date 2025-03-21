@@ -9,48 +9,29 @@ namespace Cadastro_cliente
 {
     public partial class Form1 : Form
     {
+        private readonly BindingSource BindingSource = [];
+    
         private readonly List<Cliente> Clientes = new List<Cliente>();
 
         public Form1()
         {
+
             InitializeComponent();
-            Cliente felipe = new Cliente();
-            Clientes.Add(felipe);
-
-            Endereco enderecoFelipe = new Endereco()
-            {
-                logradouro = "endereco felipe",
-                numero = "10",
-                bairro = "zl",
-                cep = "04857510",
-                cidade = "sp",
-                complemento = "casa2",
-                estado = "sp"
-            };
-            Cliente Felipe = new Cliente()
-            {
-                id = 1,
-                Nome = "Felipe araujo",
-                dataNacimento = "09/12/2005",
-                etnia = etnia.Outro,
-                tipo = TipoCliente.PF,
-                email = "felipe0912@homtail",
-                estrangeiro = false,
-                enderecoDoCliente = enderecoFelipe,
-                genero = Genero.naoBinario,
-                NomeSocial = "felipe",
-                Telefone = "11955595521"
-            };
-
-            Endereco enderecoFabio = new Endereco() { logradouro = "endereçoFabio", numero = "345" };
-            Cliente fabio = new Cliente() { id = 2, Nome = "Fabio Saraiva", dataNacimento = "30/08/2013", etnia = etnia.Branco, tipo = TipoCliente.PF };
-
-            Endereco enderecoVitor = new Endereco() { logradouro = "endereçoVitor", numero = "304" };
-            Cliente vitor = new Cliente() { id = 3, Nome = "Fabio Saraiva", dataNacimento = "15/09/1997", etnia = etnia.Branco, tipo = TipoCliente.PF };
-
-            Clientes.Add(vitor);
-            Clientes.Add(felipe);
+            Endereco endereçoFabio = new Endereco() { logradouro = "endereçoFabio", numero = "345" };
+            Cliente fabio = new Cliente() { id = 1, Nome = "Fabio Saraiva", dataNacimento = "30 / 08 / 2013", etnia = etnia.Asiatico, tipo = TipoCliente.PF };
             Clientes.Add(fabio);
+
+            Endereco endereçoVitor = new Endereco() { logradouro = "endereçoVitor", numero = "304" };
+            Cliente vitor = new Cliente() { id = 2, Nome = "Vitor", dataNacimento = "15 / 09/ 1997", etnia = etnia.Negro, tipo = TipoCliente.PF };
+            Clientes.Add(vitor);
+
+            Endereco felipe = new Endereco() { logradouro = "endereçofelipe", numero = "42" };
+            Cliente Felipe = new Cliente() { id = 3, Nome = "Felipe", dataNacimento = "9 / 12/ 2005", etnia = etnia.Negro, tipo = TipoCliente.PF };
+            Clientes.Add(Felipe);
+
+            BindingSource.DataSource = Clientes;
+            dgv_clientes.DataSource = BindingSource;
+            
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
@@ -65,23 +46,26 @@ namespace Cadastro_cliente
             string logradouro = txb_lagradouro.Text;
             string complemento = txb_complemento.Text;
             string bairro = txb_bairro.Text;
-            string numero = txb_municipio.Text;
+            string numero = msk_numero.Text; 
             string municipio = txb_municipio.Text;
             string estado = cmb_estado.Text;
             bool PF = rdb_fisica.Checked;
             bool PJ = rdb_juridica.Checked;
             bool estrangeiro = ckb_sim.Checked;
 
-            if (ValidarDados(nome, email, telefone, cep, datanascimento, nomesocial, genero, logradouro, complemento, bairro, numero, municipio, estado, PF, PJ, estrangeiro))
+            if (ValidarDados(nome, email, telefone, cep, datanascimento, genero, logradouro, bairro, numero, municipio, estado, PF, PJ))
             {
                 Cliente novoCliente = new Cliente
                 {
+                    id = GerarNovoId(),
                     Nome = nome,
                     email = email,
                     Telefone = telefone
                 };
 
                 Clientes.Add(novoCliente);
+
+                BindingSource.ResetBindings(false);
 
                 MessageBox.Show("Cliente adicionado com sucesso!");
                 LimparFormulario();
@@ -92,14 +76,13 @@ namespace Cadastro_cliente
             }
         }
 
-        private bool ValidarDados(string nome, string email, string telefone, string cep, string datanascimento, string nomesocial, string genero, string logradouro, string complemento, string bairro, string numero, string municipio, string estado, bool PF, bool PJ, bool estrangeiro)
+        private bool ValidarDados(string nome, string email, string telefone, string cep, string datanascimento, string genero, string logradouro, string bairro, string numero, string municipio, string estado, bool PF, bool PJ)
         {
             if (string.IsNullOrWhiteSpace(nome) ||
                 string.IsNullOrWhiteSpace(email) ||
                 string.IsNullOrWhiteSpace(telefone) ||
                 string.IsNullOrWhiteSpace(cep) ||
                 string.IsNullOrWhiteSpace(datanascimento) ||
-                string.IsNullOrWhiteSpace(nomesocial) ||
                 string.IsNullOrWhiteSpace(genero) ||
                 string.IsNullOrWhiteSpace(logradouro) ||
                 string.IsNullOrWhiteSpace(bairro) ||
@@ -129,30 +112,43 @@ namespace Cadastro_cliente
                 return false;
             }
 
+            if (Clientes.Any(cliente => cliente.email == email))
+            {
+                MessageBox.Show("Este email já está cadastrado.");
+                return false;
+            }
+
+            if (Clientes.Any(cliente => cliente.Telefone == telefone))
+            {
+                MessageBox.Show("Este número de telefone já está cadastrado.");
+                return false;
+            }
+
             return true;
         }
 
         private bool ValidarEmail(string email)
         {
-            try
-            {
-                // Expressão regular para validar o e-mail de forma simples
-                var regex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-                return regex.IsMatch(email);
-            }
-            catch
-            {
-                return false;
-            }
+            return email.Count(c => c == '@') == 1;
         }
 
         private bool ValidarTelefone(string telefone)
         {
-            return telefone.All(char.IsDigit) && (telefone.Length == 11); // Assumindo que o telefone tenha 11 dígitos
+            string apenasNumeros = new string(telefone.Where(char.IsDigit).ToArray());
+            return apenasNumeros.Length == 11;
+        }
+
+        private int GerarNovoId()
+        {
+            if (Clientes.Count == 0)
+                return 1;
+
+            return Clientes.Max(cliente => cliente.id) + 1;
         }
 
         private void LimparFormulario()
         {
+            txb_numero.Clear();
             txb_nome.Clear();
             txb_email.Clear();
             msk_numero.Clear();
@@ -169,5 +165,18 @@ namespace Cadastro_cliente
             rdb_juridica.Checked = false;
             ckb_sim.Checked = false;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class cliente
+    {
+        public int id { get; set; }
+        public string Nome { get; set; }
+        public string email { get; set; }
+        public string Telefone { get; set; }
     }
 }
