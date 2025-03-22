@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Mail; // Adiciona a biblioteca para MailAddress
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Cadastro_cliente
 {
@@ -12,12 +13,13 @@ namespace Cadastro_cliente
         private readonly BindingSource BindingSource = [];
     
         private readonly List<Cliente> Clientes = new List<Cliente>();
+        Endereco endereçoFabio = new Endereco() { logradouro = "endereçoFabio", numero = "345" };
 
         public Form1()
         {
 
             InitializeComponent();
-            Endereco endereçoFabio = new Endereco() { logradouro = "endereçoFabio", numero = "345" };
+           
             Cliente fabio = new Cliente() { id = 1, Nome = "Fabio Saraiva", dataNacimento = "30 / 08 / 2013", etnia = etnia.Asiatico, tipo = TipoCliente.PF };
             Clientes.Add(fabio);
 
@@ -38,20 +40,36 @@ namespace Cadastro_cliente
         {
             string nome = txb_nome.Text;
             string telefone = msk_numero.Text;
-            string cep = txb_cep.Text;
             string datanascimento = msk_nascimento.Text;
             string nomesocial = txb_nomesocial.Text;
             string genero = cmb_genero.Text;
             string email = txb_email.Text;
-            string logradouro = txb_lagradouro.Text;
-            string complemento = txb_complemento.Text;
-            string bairro = txb_bairro.Text;
-            string numero = msk_numero.Text; 
-            string municipio = txb_municipio.Text;
-            string estado = cmb_estado.Text;
             bool PF = rdb_fisica.Checked;
             bool PJ = rdb_juridica.Checked;
             bool estrangeiro = ckb_sim.Checked;
+
+
+            string cep = txb_cep.Text;
+            string logradouro = txb_lagradouro.Text;
+            string bairro = txb_bairro.Text;
+            string numero = msk_numero.Text;
+            string municipio = txb_municipio.Text;
+            string estado = cmb_estado.Text;
+
+            Endereco endereco_Novo = new Endereco()
+            {
+                logradouro = txb_lagradouro.Text,
+                numero = msk_numero.Text,
+                complemento = txb_complemento.Text,
+                bairro = txb_bairro.Text,
+                municipio = txb_municipio.Text,
+                estado = cmb_estado.Text,
+                cep = txb_cep.Text
+
+            };
+
+            int tipoClienteIndex = rdb_fisica.Checked ? 0 : 1;
+            TipoCliente tipoClienteSelecionado = (TipoCliente)tipoClienteIndex;
 
             if (ValidarDados(nome, email, telefone, cep, datanascimento, genero, logradouro, bairro, numero, municipio, estado, PF, PJ))
             {
@@ -60,7 +78,15 @@ namespace Cadastro_cliente
                     id = GerarNovoId(),
                     Nome = nome,
                     email = email,
-                    Telefone = telefone
+                    Telefone = telefone,
+                    enderecoDoCliente = endereco_Novo,
+                    dataNacimento = datanascimento,
+                    NomeSocial = txb_nomesocial.Text,
+                    genero = (Genero)cmb_genero.SelectedIndex,
+                    etnia = (etnia)cmb_etnia.SelectedIndex,
+                    tipo = tipoClienteSelecionado,
+                    estrangeiro = estrangeiro
+
                 };
 
                 Clientes.Add(novoCliente);

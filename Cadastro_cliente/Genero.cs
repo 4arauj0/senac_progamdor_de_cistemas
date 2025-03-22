@@ -11,7 +11,6 @@ namespace Cadastro_cliente
         Homem,
         Mulher,
         naoBinario,
-        
     }
     
     

@@ -251,7 +251,6 @@
             rdb_juridica.Name = "rdb_juridica";
             rdb_juridica.Size = new Size(64, 19);
             rdb_juridica.TabIndex = 10;
-            rdb_juridica.TabStop = true;
             rdb_juridica.Text = "juridica";
             rdb_juridica.UseVisualStyleBackColor = true;
             // 
@@ -276,7 +275,7 @@
             // cmb_genero
             // 
             cmb_genero.FormattingEnabled = true;
-            cmb_genero.Items.AddRange(new object[] { "masculino", "femenino", "não binario\t\t\t" });
+            cmb_genero.Items.AddRange(new object[] { " Homem", " Mulher", " naoBinario" });
             cmb_genero.Location = new Point(62, 160);
             cmb_genero.Name = "cmb_genero";
             cmb_genero.Size = new Size(96, 23);
@@ -285,7 +284,7 @@
             // cmb_etnia
             // 
             cmb_etnia.FormattingEnabled = true;
-            cmb_etnia.Items.AddRange(new object[] { "negra ", "parda", "branca", "asiatica", "indigina" });
+            cmb_etnia.Items.AddRange(new object[] { " Negro,", " Latino,", " Branco,", " Asiatico,", " Outro" });
             cmb_etnia.Location = new Point(62, 205);
             cmb_etnia.Name = "cmb_etnia";
             cmb_etnia.Size = new Size(96, 23);
@@ -294,6 +293,7 @@
             // rdb_fisica
             // 
             rdb_fisica.AutoSize = true;
+            rdb_fisica.Checked = true;
             rdb_fisica.Location = new Point(223, 243);
             rdb_fisica.Name = "rdb_fisica";
             rdb_fisica.Size = new Size(52, 19);
