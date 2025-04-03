@@ -7,9 +7,13 @@ CREATE TABLE IF NOT EXISTS livro (
     preco DECIMAL(10, 2) NULL,
     isbn VARCHAR(17) NOT NULL UNIQUE,
     id_genero INT NOT NULL,
+    id_autor INT NOT NULL,
     id_editora INT NOT NULL,
-    id_autor INT NOT NULL
+  FOREIGN KEY (id_genero)REFERENCES genero (id),
+  FOREIGN KEY (id_autor)REFERENCES autor (id),
+  FOREIGN KEY (id_editora)REFERENCES editora (id)
 );
+
 
 INSERT INTO livro (
  titulo, data_publicacao, preco, numero_paginas, isbn, id_genero, id_editora, id_autor
