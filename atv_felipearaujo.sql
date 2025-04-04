@@ -92,7 +92,7 @@ INSERT INTO empregado(
 nome,departamentoid,idade,salario)VALUES(
 'tomas',2, 18,'58000');
 
-update empregado SET salario = salario + (salario * 0.05)
+update empregado SET salario = salario + (salario * 1.05)
 WHERE departamentoid = '3';
 
 DELETE FROM empregado 
