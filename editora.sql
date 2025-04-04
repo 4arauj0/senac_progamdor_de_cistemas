@@ -21,3 +21,8 @@ VALUES
 ('senac', '82535051000182'),
 ('biblioteca azul', '97045992000105');
 
+drop table pedido;
+drop table fornecedor;
+drop table produto;
+drop table cliente;
+
