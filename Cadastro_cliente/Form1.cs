@@ -11,15 +11,37 @@ namespace Cadastro_cliente
     public partial class Form1 : Form
     {
         private readonly BindingSource BindingSource = [];
-    
-        private readonly List<Cliente> Clientes = new List<Cliente>();
-        Endereco endereçoFabio = new Endereco() { logradouro = "endereçoFabio", numero = "345" };
 
+        private readonly List<Cliente> Clientes = new List<Cliente>();
+
+     namespace cadastroDeClientes.repositorio
+    {
+        internal class ClienteRepositorio
+        {
+            public List<cliente> ListarCliente()
+            {
+                var clientes = new List<cliente>();
+
+                using (var conn = Database.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = "SELECT c.*, e.logradouro, e.numero, e.complemto, e.bairro, "
+                }
+            }
+            public class Repositorio
+            {
+            }
+        } 
+    
+
+
+        /*
         public Form1()
         {
-
+            
             InitializeComponent();
-           
+            Endereco endereçoFabio = new Endereco() { logradouro = "endereçoFabio", numero = "345" };
             Cliente fabio = new Cliente() { id = 1, Nome = "Fabio Saraiva", dataNacimento = "30 / 08 / 2013", etnia = etnia.Asiatico, tipo = TipoCliente.PF };
             Clientes.Add(fabio);
 
@@ -35,6 +57,7 @@ namespace Cadastro_cliente
             dgv_clientes.DataSource = BindingSource;
             
         }
+        */
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
@@ -101,7 +124,8 @@ namespace Cadastro_cliente
                 MessageBox.Show("Por favor, preencha todos os campos corretamente.");
             }
         }
-
+        
+        
         private bool ValidarDados(string nome, string email, string telefone, string cep, string datanascimento, string genero, string logradouro, string bairro, string numero, string municipio, string estado, bool PF, bool PJ)
         {
             if (string.IsNullOrWhiteSpace(nome) ||
@@ -197,7 +221,7 @@ namespace Cadastro_cliente
 
         }
     }
-
+    
     public class cliente
     {
         public int id { get; set; }

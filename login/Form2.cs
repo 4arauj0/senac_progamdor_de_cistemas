@@ -1,7 +1,13 @@
+using MySql.Data.MySqlClient;
+
 namespace login
 {
     public partial class Form1 : Form
     {
+
+        private static readonly string ConnectionString = "datasource=localhost;username=root;password=;database=cenac;";
+        private readonly MySqlConnection Connection = new MySqlConnection(ConnectionString);
+
         List<usuario> usuarios = new List<usuario>();
 
 
@@ -45,12 +51,27 @@ namespace login
 
             bool autenticado = false;
 
-            for (int i = 0; i < usuario_bus.Length; i++)
+           try
             {
-                if (usuarios[i].email == usuario_bus && usuarios[i].senha == senha)
-                {
-                    autenticado = true;
-                }
+                Connection.Open();
+
+                string query = $" SELECT senha FROM usuarios WHERE email = '{usuario_bus}';";
+
+                MySqlCommand mySqlCommand = new MySqlCommand(query, Connection);
+                MySqlDataReader reader = mySqlCommand.ExecuteReader();
+
+                autenticado = reader.Read() && reader.GetString(0) == senha;
+            }
+                
+                catch
+            {
+                MessageBox.Show("erro de banco de dados");
+            }
+
+            finally
+           
+            {
+                Connection.Close();
             }
 
             if (!autenticado)
@@ -93,7 +114,7 @@ namespace login
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           
+
 
 
 
@@ -177,13 +198,28 @@ namespace login
             {
                 lbl_resultado.Text = "Já existe um usuário cadastrado";
                 return;
-            }
 
-            // Adiciona o novo usuário na lista
-            usuarios.Add(new usuario() { email = novoUsuario, senha = novaSenha });
-            lbl_resultado.Text = "Usuário cadastrado com sucesso!";
-            txb_Ncadastro.Clear();
-            txb_senha.Clear();
+
+                try
+                {
+                    Connection.Open();
+
+                    string query = $"select email usuario where email =";
+                }
+                catch
+                {
+                    MessageBox.Show("Erro de banco de dados");
+                }
+                finally
+                {
+                    Connection.Close();
+                }
+                // Adiciona o novo usuário na lista
+                usuarios.Add(new usuario() { email = novoUsuario, senha = novaSenha });
+                lbl_resultado.Text = "Usuário cadastrado com sucesso!";
+                txb_Ncadastro.Clear();
+                txb_senha.Clear();
+            }
         }
     }
 }
