@@ -1,0 +1,35 @@
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\listas atividades.exe
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\listas atividades.deps.json
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\listas atividades.runtimeconfig.json
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\listas atividades.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\listas atividades.pdb
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.csproj.AssemblyReference.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas_atividades.ListaDeAtividade.resources
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.csproj.GenerateResource.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.AssemblyInfoInputs.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.AssemblyInfo.cs
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.csproj.CoreCompileInputs.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.sourcelink.json
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas a.198BBA83.Up2Date
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\refint\listas atividades.dll
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.pdb
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\listas atividades.genruntimeconfig.cache
+C:\Users\felipe.aoliveira54\progamador de sistemas\senac_progamdor_de_sistemas\listas atividades\obj\Debug\net8.0-windows\ref\listas atividades.dll

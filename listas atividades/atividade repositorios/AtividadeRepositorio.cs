@@ -66,5 +66,36 @@ namespace listas_atividades
             return new atividade();
 
         }
+
+        public List<atividade> ListarAtividadesPendentes()
+        {
+            List<atividade> atividades = [];
+            using (var con = DataBase.GetConnection())
+            {
+                con.Open();
+                string query = $"SELECT * FROM atividade WHERE situacao = {(int)Situacao.Pendente};";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    using (var reader = cmd.ExecuteReader())
+
+                    {
+                        while (reader.Read())
+                        {
+                            atividades.Add(new atividade()
+                            {
+                                id = reader.GetInt32("id"),
+                                titulo = reader.GetString("titulo"),
+                                Situacao = (Situacao)reader.GetInt32("situacao")
+                            });
+
+
+                        }
+
+                    }
+
+                }
+                return atividades;
+            }
+        }
     }
-}
+} 
